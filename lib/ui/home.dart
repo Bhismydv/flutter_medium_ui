@@ -1,8 +1,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_medium_ui/news_article.dart';
-import 'package:flutter_medium_ui/news_helper.dart';
+import 'package:flutter_medium_ui/model/news_article.dart';
+import 'package:flutter_medium_ui/model/news_helper.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Home extends StatefulWidget {
@@ -57,98 +57,95 @@ class _HomeState extends State<Home> {
               Text("Write", style: TextStyle(color: Colors.grey, fontSize: 14),)
             ],
           ),
-       GestureDetector(
-         child: Padding(
-           padding: EdgeInsets.only(right: 5, left: 5),
-           child: Icon(Icons.notifications_none, color: Colors.grey,),
-         ),
-       ),
-          /*Padding(
+          GestureDetector(
+            child: Padding(
+              padding: EdgeInsets.only(right: 5, left: 5),
+              child: Icon(Icons.notifications_none, color: Colors.grey,),
+            ),
+          ),
+          Padding(
             padding: const EdgeInsets.only(right: 5),
-            child: GestureDetector (
-                child: CircleAvatar(
-                  backgroundImage: AssetImage("assets/messi.png"),
-                )),
-          )*/
-          PopupMenuButton(
-           child: CircleAvatar(backgroundImage: AssetImage("assets/messi.png")),
-              itemBuilder: (context)=><PopupMenuItem>[
-                PopupMenuItem(child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Icon(FontAwesomeIcons.user, color: Colors.grey,),
-                        SizedBox(width: 20,),
-                        Text("Profile"),
-                      ],
-                    ),
-                    SizedBox(height: 20,),
-                    Row(
-                      children: [
-                        Icon(Icons.bookmarks_outlined, color: Colors.grey,),
-                        SizedBox(width: 20,),
-                        Text("Lists"),
-                      ],
-                    ),
-                    SizedBox(height: 20,),
-                    Row(
-                      children: [
-                        Icon(Icons.amp_stories_outlined, color: Colors.grey,),
-                        SizedBox(width: 20,),
-                        Text("Stories"),
-                      ],
-                    ),
-                    SizedBox(height: 20,),
-                    Row(
-                      children: [
-                        Icon(Icons.signal_cellular_alt, color: Colors.grey,),
-                        SizedBox(width: 20,),
-                        Text("Stats"),
-                      ],
-                    ),
-                    SizedBox(height: 20,),
-                    Divider(),
-                    SizedBox(height: 20,),
-                  ],
-                ) ),
-                PopupMenuItem(child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("Settings"),
-                    SizedBox(height: 20,),
-                    Text("Refine recommendations"),
-                    SizedBox(height: 20,),
-                    Text("Manage publications"),
-                    SizedBox(height: 20,),
-                    Divider(),
-                    SizedBox(height: 20,),
-                  ],
-                )),
-              PopupMenuItem(child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("Became a member"),
-                  SizedBox(height: 20,),
-                  Text("Apply to the Partner Program"),
-                  SizedBox(height: 20,),
-                  Text("Gift a membership"),
-                  SizedBox(height: 20,),
-                  Divider(),
-                  SizedBox(height: 20,),
-                ],
-              )),
-                PopupMenuItem(child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("Sign out"),
-                    SizedBox(height: 10,),
-                    Text("bhismydv2912@gmail.com"),
-                    SizedBox(height: 20,),
-                  ],
-                ))
+            child: PopupMenuButton(
+                child: CircleAvatar(backgroundImage: AssetImage("assets/messi.png")),
+                itemBuilder: (context)=><PopupMenuItem>[
+                  PopupMenuItem(child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(FontAwesomeIcons.user, color: Colors.grey,),
+                          SizedBox(width: 20,),
+                          Text("Profile"),
+                        ],
+                      ),
+                      SizedBox(height: 20,),
+                      Row(
+                        children: [
+                          Icon(Icons.bookmarks_outlined, color: Colors.grey,),
+                          SizedBox(width: 20,),
+                          Text("Lists"),
+                        ],
+                      ),
+                      SizedBox(height: 20,),
+                      Row(
+                        children: [
+                          Icon(Icons.amp_stories_outlined, color: Colors.grey,),
+                          SizedBox(width: 20,),
+                          Text("Stories"),
+                        ],
+                      ),
+                      SizedBox(height: 20,),
+                      Row(
+                        children: [
+                          Icon(Icons.signal_cellular_alt, color: Colors.grey,),
+                          SizedBox(width: 20,),
+                          Text("Stats"),
+                        ],
+                      ),
+                      SizedBox(height: 20,),
+                      Divider(),
+                      SizedBox(height: 20,),
+                    ],
+                  ) ),
+                  PopupMenuItem(child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Settings"),
+                      SizedBox(height: 20,),
+                      Text("Refine recommendations"),
+                      SizedBox(height: 20,),
+                      Text("Manage publications"),
+                      SizedBox(height: 20,),
+                      Divider(),
+                      SizedBox(height: 20,),
+                    ],
+                  )),
+                  PopupMenuItem(child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Became a member"),
+                      SizedBox(height: 20,),
+                      Text("Apply to the Partner Program"),
+                      SizedBox(height: 20,),
+                      Text("Gift a membership"),
+                      SizedBox(height: 20,),
+                      Divider(),
+                      SizedBox(height: 20,),
+                    ],
+                  )),
+                  PopupMenuItem(child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Sign out"),
+                      SizedBox(height: 10,),
+                      Text("bhismydv2912@gmail.com"),
+                      SizedBox(height: 20,),
+                    ],
+                  ))
 
-              ]),
+                ]),
+          ),
+
         ],
       ),
       body: Container(
