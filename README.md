@@ -1,5 +1,8 @@
 # flutter_medium_ui
 
+# Demo
+![](https://github.com/Bhismydv/flutter_medium_ui/blob/main/medium_ui.gif)
+
 A new Flutter application.
 
 ## Getting Started
